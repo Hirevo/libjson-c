@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "*.h": "c",
+        "*.shdr": "glsl",
+        "array": "c",
+        "string_view": "c",
+        "chrono": "c",
+        "functional": "c",
+        "istream": "c",
+        "ostream": "c",
+        "ratio": "c",
+        "type_traits": "c",
+        "tuple": "c",
+        "utility": "c"
+    }
+}
