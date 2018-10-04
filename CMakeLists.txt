@@ -16,8 +16,8 @@ add_library(json STATIC
     src/parse/parse
     src/parse/types
     src/serialize/base
-    src/serialize/object)
-
-target_include_directories(json PRIVATE "../vec/src")
-target_include_directories(json PRIVATE "../hmap/src")
-target_include_directories(json PRIVATE "../str/src")
+    src/serialize/object
+)
+target_include_directories(json PUBLIC src)
+add_dependencies(json vec hmap str)
+target_link_libraries(json vec hmap str)
