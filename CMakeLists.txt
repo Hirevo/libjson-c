@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.0)
 
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -W -Wall -Wextra -Wunused -Wuninitialized -O3")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -W -Wall -Wextra -Wunused -Wuninitialized")
 
 add_library(json STATIC
     src/clear
