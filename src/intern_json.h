@@ -10,24 +10,24 @@
 #include "json.h"
 
 #define COMMENT_REPLACE                                                       \
-	if (lstr_starts_with(str + adv, tab[type][tabidx])) {                 \
-		len += strlen(tab[type][tabidx]);                             \
-		return (ljson_remove_substr(str, idx, len));                  \
-	}
+    if (lstr_starts_with(str + adv, tab[type][tabidx])) {                     \
+        len += strlen(tab[type][tabidx]);                                     \
+        return (ljson_remove_substr(str, idx, len));                          \
+    }
 
 typedef struct json_parse_func_s {
-	json_type_t type;
-	int (*func)(char *, int, void **);
+    json_type_t type;
+    int (*func)(char *, int, void **);
 } json_parse_func_t;
 
 typedef struct json_serialize_func_s {
-	json_type_t type;
-	int (*func)(json_item_t *, char **);
+    json_type_t type;
+    int (*func)(json_item_t *, char **);
 } json_serialize_func_t;
 
 typedef struct json_type_tuple_s {
-	char *chars;
-	json_type_t type;
+    char *chars;
+    json_type_t type;
 } json_type_tuple_t;
 
 /*
@@ -66,4 +66,3 @@ int ljson_serialize_object(json_item_t *elem, char **output);
 int ljson_serialize_array(json_item_t *elem, char **output);
 int ljson_serialize_bool(json_item_t *elem, char **output);
 int ljson_serialize_null(json_item_t *elem, char **output);
-
